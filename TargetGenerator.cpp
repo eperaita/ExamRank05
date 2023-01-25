@@ -12,8 +12,6 @@ TargetGenerator::~TargetGenerator(){
 	std::vector<ATarget *>::iterator iter;
 	for (iter = objectives.begin(); iter != objectives.end();++iter )
 	{
-	std::cout << "to delete:::::::::::::!" << (*iter)->getType() << std::endl;
-		
 		delete *iter;
 	};
 	this->objectives.clear();
@@ -49,7 +47,7 @@ void TargetGenerator::forgetTargetType(std::string const &target){
     {
         if(target	== (*iter)->getType() )
         {
-            return(*iter);//clone????????????????
+            return((*iter));//clone????????????????
         }
     };
     return (0);

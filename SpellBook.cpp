@@ -20,7 +20,7 @@ SpellBook::~SpellBook(){
 
 void SpellBook::learnSpell(ASpell *s){
 	if(s)
-		book.push_back(s/*->clone()*/);
+		book.push_back(s->clone());
 };	
 
 void SpellBook::forgetSpell(std::string const &spell){
@@ -48,7 +48,7 @@ ASpell *SpellBook::createSpell(std::string const &spell){
 	{
 		if(spell == (*iter)->getName() )
 		{
-			return(*iter);//clone????????????????
+			return((*iter));//clone????????????????
 		}
 	};
 	return (0);

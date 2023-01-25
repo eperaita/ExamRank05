@@ -24,8 +24,6 @@ int main()
 	richard.launchSpell("Fireball", *wall);
 
 
-	std::cout << " ------------------------------------------- "  << std::endl;
-
 		
 }
 

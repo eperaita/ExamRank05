@@ -23,6 +23,7 @@ Warlock::~Warlock(){
 		delete *iter;
 	};
 	mybook.clear();*/
+//	system ("leaks a.out");
 };
 
 const std::string Warlock::getName() const { return (this->name); };
