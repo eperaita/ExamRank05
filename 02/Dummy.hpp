@@ -3,16 +3,14 @@
 
 #include "ATarget.hpp"
 
-class Dummy : public ATarget{
+class Dummy: public ATarget{
 
 	public:
 		Dummy();
 		~Dummy();
 
-		ATarget *clone();
-
+		ATarget *clone() const;
 };
 
 
 #endif
-

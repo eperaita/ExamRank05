@@ -5,5 +5,5 @@ Fwoosh::Fwoosh(){ this->name = "Fwoosh"; this->effects = "fwooshed"; };
 
 Fwoosh::~Fwoosh(){};
 
-ASpell *Fwoosh::clone(){ return (new Fwoosh(*this)); }
+ASpell *Fwoosh::clone() const{ return (new Fwoosh(*this)); }
 

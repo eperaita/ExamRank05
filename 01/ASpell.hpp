@@ -19,10 +19,10 @@ class ASpell{
 		ASpell(const ASpell &orig);
 		ASpell &operator=(const ASpell &orig);
 
-		const std::string getName() const ;
-		const std::string getEffects() const ;
+		const std::string &getName() const ;
+		const std::string &getEffects() const ;
 
-		virtual ASpell *clone() = 0; //no const?????
+		virtual ASpell *clone() const = 0; //no const?????
 
 		void launch(const ATarget &target) const;
 

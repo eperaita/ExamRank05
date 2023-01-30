@@ -5,6 +5,6 @@ Dummy::Dummy() { this->type = "Target Practice Dummy"; };
 
 Dummy::~Dummy(){};
 
-ATarget *Dummy::clone(){  return (new Dummy(*this));};
+ATarget *Dummy::clone() const{  return (new Dummy(*this));};
 
 

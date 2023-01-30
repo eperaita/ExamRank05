@@ -24,8 +24,8 @@ class Warlock{
 		Warlock(std::string n, std::string t);
 		~Warlock();
 
-		const std::string getName() const ;
-		const std::string getTitle() const;
+		const std::string &getName() const ;
+		const std::string &getTitle() const;
 		void setTitle( const std::string t);
 
 		void introduce() const;

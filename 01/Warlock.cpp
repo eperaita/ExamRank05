@@ -25,9 +25,9 @@ Warlock::~Warlock(){
 	book.clear();
 };
 
-const std::string Warlock::getName() const { return (this->name); };
+const std::string &Warlock::getName() const { return (this->name); };
 		
-const std::string Warlock::getTitle() const { return (this->title); };
+const std::string &Warlock::getTitle() const { return (this->title); };
 	
 void Warlock::setTitle(const std::string t){ this->title = t;};
 
@@ -38,7 +38,16 @@ void Warlock::introduce() const {
 void Warlock::learnSpell(ASpell *spell){
 	
 	if(spell)
-		book.push_back(spell/*->clone()*/);
+	{
+		std::vector<ASpell *>::iterator iter;
+
+		for (iter = this->book.begin(); iter != this->book.end(); )
+		{
+			if((*iter)->getName() == spell->getName() )
+				return ;
+		};
+		book.push_back(spell->clone());
+	}
 
 };
 
@@ -67,6 +76,8 @@ void Warlock::launchSpell(const std::string &spell, const ATarget &target){
 		if(spell == (*iter)->getName() )
 		{	
 			(*iter)->launch(target);
+			return;// OJOOOOOOOOOOOOOOOOOOOO!!!
+			
 		}
 	};
 };
