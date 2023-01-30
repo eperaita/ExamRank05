@@ -10,7 +10,7 @@ const Warlock &Warlock::operator=(const Warlock &orig){
 	return (*this);
 };
 
-Warlock::Warlock(std::string n, std::string t): name(n), title(t){
+Warlock::Warlock(const std::string &n, const std::string &t): name(n), title(t){
 	std::cout << this->getName() << ": This looks like another boring day." << std::endl;
 };
 
@@ -51,7 +51,7 @@ void Warlock::learnSpell(ASpell *spell){
 
 };
 
-void Warlock::forgetSpell(const std::string &spell){
+void Warlock::forgetSpell(std::string spell){
 
 	std::vector<ASpell *>::iterator iter;
 
@@ -67,7 +67,7 @@ void Warlock::forgetSpell(const std::string &spell){
 	};
 };
 
-void Warlock::launchSpell(const std::string &spell, const ATarget &target){
+void Warlock::launchSpell(std::string spell, const ATarget &target){
 
 	std::vector<ASpell *>::iterator iter;
 

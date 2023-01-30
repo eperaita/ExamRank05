@@ -41,7 +41,7 @@ void SpellBook::learnSpell(const ASpell *s){
 	};
 };
 
-void SpellBook::forgetSpell(std::string const &s){
+void SpellBook::forgetSpell(std::string s){
 	std::vector<ASpell *>::iterator i;
 
 	for( i = book.begin(); i != book.end();)
@@ -57,7 +57,7 @@ void SpellBook::forgetSpell(std::string const &s){
 
 };
 
-ASpell* SpellBook::createSpell(std::string const &s){
+ASpell* SpellBook::createSpell(std::string s){
 	std::vector<ASpell *>::iterator i;
 
 	for( i = book.begin(); i != book.end(); ++i)

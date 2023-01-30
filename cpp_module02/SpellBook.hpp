@@ -15,8 +15,8 @@ class SpellBook{
 		~SpellBook();
 
 		void learnSpell(const ASpell *s);
-		void forgetSpell(std::string const &s);
-		ASpell* createSpell(std::string const &s);
+		void forgetSpell(std::string s);
+		ASpell* createSpell(std::string s);
 
 };
 

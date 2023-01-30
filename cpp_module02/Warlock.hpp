@@ -27,7 +27,7 @@ class Warlock{
 
 	public:
 		~Warlock();
-		Warlock(std::string n, std::string t);
+		Warlock(const std::string &n, const std::string &t);
 		
 		const std::string &getName() const;
 		const std::string &getTitle() const;
@@ -36,9 +36,9 @@ class Warlock{
 
 		void introduce() const;
 
-		void learnSpell(const ASpell *s);
-		void forgetSpell(const std::string &s);
-		void launchSpell(const std::string &s, const ATarget &t);
+		void learnSpell(ASpell *s);
+		void forgetSpell(std::string s);
+		void launchSpell(std::string s, const ATarget &t);
 
 };
 
@@ -46,4 +46,3 @@ class Warlock{
 
 
 #endif
-

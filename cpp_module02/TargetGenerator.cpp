@@ -37,7 +37,7 @@ void TargetGenerator::learnTargetType(ATarget *t){
 
 };
 		
-void TargetGenerator::forgetTargetType(std::string const &t){
+void TargetGenerator::forgetTargetType(std::string t){
 std::vector<ATarget *>::iterator i;
 
 	for( i = objectives.begin(); i != objectives.end();)
@@ -53,7 +53,7 @@ std::vector<ATarget *>::iterator i;
 
 };
 		
-ATarget *TargetGenerator::createTarget(std::string const &t){
+ATarget *TargetGenerator::createTarget(const std::string &t){
 	std::vector<ATarget *>::iterator i;
 
 	for( i = objectives.begin(); i != objectives.end(); ++i)
